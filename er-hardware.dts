@@ -1,0 +1,31 @@
+/*
+* Copyright (C) 2026 Effective Range Kft.
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License version 2 as
+* published by the Free Software Foundation.
+*/
+/dts-v1/;
+/plugin/;
+
+/ {
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+            er_hw: effective-range,hardware {
+                compatible = "effective-range,hardware-id";
+                effective-range,type = "unknown";
+                effective-range,revision-major = <0>;
+                effective-range,revision-minor = <0>;
+                effective-range,revision-patch = <0>;
+            };
+        };
+    };
+
+    __overrides__ {
+        hw_type      = <&er_hw>, "effective-range,type";
+        hw_rev_major = <&er_hw>, "effective-range,revision-major:0";
+        hw_rev_minor = <&er_hw>, "effective-range,revision-minor:0";
+        hw_rev_patch = <&er_hw>, "effective-range,revision-patch:0";
+    };
+};

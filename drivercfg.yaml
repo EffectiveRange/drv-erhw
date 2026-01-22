@@ -1,0 +1,9 @@
+project: er-hardware
+version: auto
+dts_only: true
+maintainer: Effective Range Kft.
+description: >
+  Device tree overlay for defining the hardware type and revision for the
+  actual board running the driver.
+  This is used by the driver to identify the hardware and apply
+  hardware-specific settings.
