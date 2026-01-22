@@ -11,8 +11,8 @@ name: CI/CD
 
 on:
   push:
-      branches: main
-      tags: v*.*.*
+      branches: [main]
+      tags: [v*.*.*]
 
   pull_request:
       types:
@@ -26,5 +26,5 @@ jobs:
   secrets: 
     access-token: ${{secrets.ACTIONS_RO_TOKEN}}
   with:
-    build-version: '["armhf-bookworm", "arm64-bookworm","armhf-trixie", "arm64-trixie"]'
+    build-version: '["arm64-trixie"]'
   

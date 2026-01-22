@@ -22,7 +22,7 @@
 To enable the overlay for a board of type `mrcm` with hardware revision 0.5, add this to your config:
 
 ```
-dtoverlay=er-hardware:hw_type=mrcm,hw_rev_major=0,hw_rev_minor=5
+dtoverlay=er-hardware,hw_type=mrcm,hw_rev_major=0,hw_rev_minor=5
 ```
 
 ### Result
