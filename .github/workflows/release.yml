@@ -26,5 +26,5 @@ jobs:
   secrets: 
     access-token: ${{secrets.ACTIONS_RO_TOKEN}}
   with:
-    build-version: '["arm64-trixie"]'
+    build-version: '["armhf-trixie","arm64-trixie"]'
   
